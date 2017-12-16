@@ -14,6 +14,7 @@
     <div class="col-md-12">
       <joke-block v-for="(joke, index) in $store.state.jokes"
                   :joke="joke"
+                  :index="index"
                   key="joke">
       </joke-block>
     </div>
