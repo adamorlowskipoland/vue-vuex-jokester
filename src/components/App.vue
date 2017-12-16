@@ -7,8 +7,15 @@
             @click="initJokes">
       Add ten random Jokes
     </button>
+    <button class="btn btn-primary"
+            @click="addJoke">
+      Add random Joke
+    </button>
     <div class="col-md-12">
-      <joke-block v-for="(joke, index) in $store.state.jokes" :joke="joke" key="joke"></joke-block>
+      <joke-block v-for="(joke, index) in $store.state.jokes"
+                  :joke="joke"
+                  key="joke">
+      </joke-block>
     </div>
   </div>
 </template>
@@ -22,7 +29,8 @@
       JokeBlock
     },
     methods: mapActions([
-      'initJokes'
+      'initJokes',
+      'addJoke'
     ])
   }
 </script>
